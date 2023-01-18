@@ -1,3 +1,10 @@
+.vscode
+config
+ssl
+server-set.sh
+redirect.sh
+a.json
+
 # Logs
 logs
 *.log

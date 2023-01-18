@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  redis-session:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/redis
+    image: redis-session-image
+    container_name: redis-session
+    volumes:
+      - redis-data:/data
+    networks:
+      - remote-lab
+    ports:
+      - 6379:6379
+
+volumes:
+  redis-data:
+
+networks:
+  remote-lab:
+    name: remote-lab
